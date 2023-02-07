@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Doctor-Glitch.ttf">
+            <string>DoctorGlitch</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarsPhotoExplorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="rovers" translatesAutoresizingMaskIntoConstraints="NO" id="MDR-vK-MPn">
+                                <rect key="frame" x="0.0" y="355.33333333333331" width="393" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kR9-nu-nLS"/>
+                                </constraints>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="9w9-iu-jec">
+                                <rect key="frame" x="0.0" y="465.33333333333326" width="393" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="TtQ-50-Dj8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="dateChanged:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cj9-xB-w01"/>
+                                </connections>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="idSelector" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-JC-i7m">
+                                <rect key="frame" x="0.0" y="645.33333333333337" width="393" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="R3y-0b-XUH"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Images:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGK-Za-e95">
+                                <rect key="frame" x="10" y="615.33333333333337" width="146" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLORE MARS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAO-eY-2w1">
+                                <rect key="frame" x="74.666666666666686" y="69" width="244" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" name="DoctorGlitch" family="Doctor Glitch" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mTL-94-ZYS">
+                                <rect key="frame" x="76" y="105.33333333333331" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="6z4-ke-iYk"/>
+                                    <constraint firstAttribute="width" constant="240" id="ukQ-ML-33K"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mTL-94-ZYS" firstAttribute="top" secondItem="NAO-eY-2w1" secondAttribute="bottom" constant="5" id="882-bT-8r4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mTL-94-ZYS" secondAttribute="trailing" constant="77" id="8PU-ca-Ntu"/>
+                            <constraint firstItem="Gg1-JC-i7m" firstAttribute="top" secondItem="IGK-Za-e95" secondAttribute="bottom" constant="10" id="AQb-tb-YG9"/>
+                            <constraint firstItem="MDR-vK-MPn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ahw-OM-Gv0"/>
+                            <constraint firstItem="IGK-Za-e95" firstAttribute="top" secondItem="9w9-iu-jec" secondAttribute="bottom" constant="10" id="B3X-KF-4bh"/>
+                            <constraint firstItem="MDR-vK-MPn" firstAttribute="top" secondItem="mTL-94-ZYS" secondAttribute="bottom" constant="10" id="Cj6-bO-FBp"/>
+                            <constraint firstItem="9w9-iu-jec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IG8-Nh-cgq"/>
+                            <constraint firstItem="MDR-vK-MPn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RBv-7k-Qrf"/>
+                            <constraint firstItem="9w9-iu-jec" firstAttribute="top" secondItem="MDR-vK-MPn" secondAttribute="bottom" constant="10" id="TXs-9o-hur"/>
+                            <constraint firstItem="Gg1-JC-i7m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WCY-NQ-BoM"/>
+                            <constraint firstItem="NAO-eY-2w1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="YAx-F5-8d1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gg1-JC-i7m" secondAttribute="trailing" id="Zls-kX-j1K"/>
+                            <constraint firstItem="mTL-94-ZYS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="bYE-Gx-b06"/>
+                            <constraint firstItem="NAO-eY-2w1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dct-Ll-0ej"/>
+                            <constraint firstItem="MDR-vK-MPn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ey5-w2-Eac"/>
+                            <constraint firstItem="MDR-vK-MPn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rt4-kQ-x1E"/>
+                            <constraint firstItem="9w9-iu-jec" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vBn-4W-YAA"/>
+                            <constraint firstItem="IGK-Za-e95" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vVL-wp-h9u"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dayPicker" destination="9w9-iu-jec" id="iET-mW-70L"/>
+                        <outlet property="headingLabel" destination="NAO-eY-2w1" id="3N9-Zi-8lk"/>
+                        <outlet property="imagePicker" destination="Gg1-JC-i7m" id="76O-lw-iJ8"/>
+                        <outlet property="numImages" destination="IGK-Za-e95" id="DvF-7k-0eH"/>
+                        <outlet property="roverImage" destination="mTL-94-ZYS" id="0H4-3H-5py"/>
+                        <outlet property="roverPicker" destination="MDR-vK-MPn" id="Eht-4c-hW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
 </document>

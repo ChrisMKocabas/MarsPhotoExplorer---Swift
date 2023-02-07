@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047783D9299080A500E8521B /* Doctor-Glitch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 047783D8299080A500E8521B /* Doctor-Glitch.ttf */; };
+		048C916229907AC0003B9A7A /* mars_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 048C916129907AC0003B9A7A /* mars_bg.jpg */; };
 		04B5307D298F144F003922A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5307C298F144F003922A5 /* AppDelegate.swift */; };
 		04B5307F298F144F003922A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5307E298F144F003922A5 /* SceneDelegate.swift */; };
 		04B53081298F144F003922A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B53080298F144F003922A5 /* ViewController.swift */; };
@@ -17,6 +19,9 @@
 		04B53097298F1450003922A5 /* MarsPhotoExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B53096298F1450003922A5 /* MarsPhotoExplorerTests.swift */; };
 		04B530A1298F1450003922A5 /* MarsPhotoExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B530A0298F1450003922A5 /* MarsPhotoExplorerUITests.swift */; };
 		04B530A3298F1450003922A5 /* MarsPhotoExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B530A2298F1450003922A5 /* MarsPhotoExplorerUITestsLaunchTests.swift */; };
+		04B530B0298F1EF7003922A5 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B530AF298F1EF7003922A5 /* NetworkingService.swift */; };
+		04B530B4298F2872003922A5 /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B530B3298F2872003922A5 /* PhotoObject.swift */; };
+		04B530B6298F3140003922A5 /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B530B5298F3140003922A5 /* JSONService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047783D8299080A500E8521B /* Doctor-Glitch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Doctor-Glitch.ttf"; sourceTree = "<group>"; };
+		048C916129907AC0003B9A7A /* mars_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mars_bg.jpg; sourceTree = "<group>"; };
 		04B53079298F144F003922A5 /* MarsPhotoExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPhotoExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B5307C298F144F003922A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B5307E298F144F003922A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +58,9 @@
 		04B5309C298F1450003922A5 /* MarsPhotoExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsPhotoExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B530A0298F1450003922A5 /* MarsPhotoExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoExplorerUITests.swift; sourceTree = "<group>"; };
 		04B530A2298F1450003922A5 /* MarsPhotoExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04B530AF298F1EF7003922A5 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		04B530B3298F2872003922A5 /* PhotoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
+		04B530B5298F3140003922A5 /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,16 @@
 		04B5307B298F144F003922A5 /* MarsPhotoExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				047783D8299080A500E8521B /* Doctor-Glitch.ttf */,
 				04B5307C298F144F003922A5 /* AppDelegate.swift */,
 				04B5307E298F144F003922A5 /* SceneDelegate.swift */,
 				04B53080298F144F003922A5 /* ViewController.swift */,
+				04B530B5298F3140003922A5 /* JSONService.swift */,
+				04B530AF298F1EF7003922A5 /* NetworkingService.swift */,
 				04B53082298F144F003922A5 /* Main.storyboard */,
+				04B530B3298F2872003922A5 /* PhotoObject.swift */,
 				04B53088298F1450003922A5 /* Assets.xcassets */,
+				048C916129907AC0003B9A7A /* mars_bg.jpg */,
 				04B5308A298F1450003922A5 /* LaunchScreen.storyboard */,
 				04B5308D298F1450003922A5 /* Info.plist */,
 				04B53085298F144F003922A5 /* MarsPhotoExplorer.xcdatamodeld */,
@@ -235,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B5308C298F1450003922A5 /* LaunchScreen.storyboard in Resources */,
+				048C916229907AC0003B9A7A /* mars_bg.jpg in Resources */,
 				04B53089298F1450003922A5 /* Assets.xcassets in Resources */,
+				047783D9299080A500E8521B /* Doctor-Glitch.ttf in Resources */,
 				04B53084298F144F003922A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B530B0298F1EF7003922A5 /* NetworkingService.swift in Sources */,
 				04B53087298F144F003922A5 /* MarsPhotoExplorer.xcdatamodeld in Sources */,
 				04B53081298F144F003922A5 /* ViewController.swift in Sources */,
 				04B5307D298F144F003922A5 /* AppDelegate.swift in Sources */,
 				04B5307F298F144F003922A5 /* SceneDelegate.swift in Sources */,
+				04B530B4298F2872003922A5 /* PhotoObject.swift in Sources */,
+				04B530B6298F3140003922A5 /* JSONService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
